@@ -1,0 +1,93 @@
+/**
+ * ✅ Wayple Full 개선 버전 : Dark Mode + Global 안정화 세트
+ * 위치 : /home/ubuntu/wayple/service/src/style/global.css
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ✅ 전체 페이지 Dark Mode + Light Mode 기본 세팅 */
+html.dark body {
+    background-color: #1f2937; /* Tailwind gray-800 */
+    color: #e5e7eb;            /* Tailwind gray-200 */
+}
+
+html body {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+/* ✅ 강제 override : 서브 페이지 bg-white 박스 모두 잡기 */
+html.dark div[class*="bg-white"] {
+    background-color: #1f2937 !important;
+    color: #e5e7eb !important;
+}
+
+/* ✅ Layout Wrappers */
+.wayple-wrapper {
+    width: 100%;
+}
+
+.wayple-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+/* ✅ 기본 바디 세팅 */
+body {
+    @apply font-sans;
+}
+
+/* ✅ Header + Nav Dark 대응 */
+header {
+    @apply bg-white sticky top-0 z-50 dark:bg-gray-800 dark:text-gray-200;
+}
+
+nav {
+    @apply flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800;
+}
+
+nav a {
+    @apply text-lg font-medium text-gray-700 hover:text-green-600 transition dark:text-gray-200 dark:hover:text-green-400;
+}
+
+/* ✅ Main + Sub Pages Dark 대응 */
+main {
+    @apply w-full bg-white dark:bg-gray-900 dark:text-gray-200;
+}
+
+/* ✅ Typography */
+h1 {
+    @apply text-3xl font-bold text-green-600 mb-4;
+}
+
+p {
+    @apply text-base leading-relaxed;
+}
+
+a {
+    @apply text-green-600 hover:text-green-800 underline dark:text-green-400 dark:hover:text-green-200;
+}
+
+/* ✅ Button Standard */
+.btn {
+    @apply inline-block px-4 py-2 bg-green-600 text-white font-semibold rounded hover:bg-green-700 transition;
+}
+
+/* ✅ react-draft-wysiwyg 그림자, 테두리, 배경 제거 */
+.rdw-editor-wrapper, .rdw-editor-main {
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+/* ✅ 혹시 외부 div나 section에 그림자 있으면 제거 */
+.shadow, .shadow-md, .shadow-lg, .shadow-xl, .shadow-2xl {
+  box-shadow: none !important;
+}
+

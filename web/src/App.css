@@ -1,0 +1,63 @@
+/* src/App.css */
+
+/* ⭐ global css import */
+@import './styles/global.css';
+
+/* ✅ 기본 리셋 + 레이아웃 안정화 */
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ✅ 글로벌 폰트 + 배경 + overflow 방지 */
+body {
+  font-family: 'Inter', 'Pretendard', 'Noto Sans KR', sans-serif;
+  background-color: #f9fafb; /* 연한 회색 → 고급 느낌 */
+  color: #333333;
+  overflow-x: hidden;
+}
+
+/* ✅ (선택) 프로젝트 필요시 유지 → 지금은 제거 권장 */
+/* 
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+*/

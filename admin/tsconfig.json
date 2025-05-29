@@ -1,0 +1,35 @@
+// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2018",                // ✅ finally() 사용 가능
+    "lib": ["DOM", "ES2018"],          // ✅ 표준 Promise 포함
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
+
+
+
+
+//{
+//  "compilerOptions": {
+//    "baseUrl": ".",
+//    "jsx": "react-jsx",
+//    "paths": {
+//      "@/*": ["src/*"]
+//    }
+//  },
+//  "files": [],
+//  "references": [
+//    { "path": "./tsconfig.app.json" },
+//    { "path": "./tsconfig.node.json" }
+//  ]
+//}
