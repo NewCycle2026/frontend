@@ -1,0 +1,10 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",           // ← 루트 기준
+    "paths": {
+      "@/*": ["./*"]          // ← @/screens/HomeScreen 등으로 사용 가능
+    }
+  }
+}
